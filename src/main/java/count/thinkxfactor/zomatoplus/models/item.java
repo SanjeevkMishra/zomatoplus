@@ -11,14 +11,11 @@ import javax.persistence.Table;
 public class item {
 	@Id
 	@GeneratedValue//default generation strategy
-	//@Column(name="item_id")
-	//private Long id;
+	@Column(name="item_id")
+	private Long id;
 	
-	@Column(name="Restaurant_id")
-	private Long restaurantId;
-	
-	@Column(name="city")
-	private String city;
+	@Column(name="name")
+	private String name;
 	
 	@Column(name="price")
 	private String price;
@@ -26,12 +23,14 @@ public class item {
 	@Column(name="description")
 	private String description;
 
+	
 	/**
 	 * @return the id
 	 */
 	public Long getId() {
 		return id;
 	}
+
 
 	/**
 	 * @param id the id to set
@@ -40,33 +39,22 @@ public class item {
 		this.id = id;
 	}
 
-	/**
-	 * @return the restaurantId
-	 */
-	public Long getRestaurantId() {
-		return restaurantId;
-	}
 
 	/**
-	 * @param restaurantId the restaurantId to set
+	 * @return the name
 	 */
-	public void setRestaurantId(Long restaurantId) {
-		this.restaurantId = restaurantId;
+	public String getName() {
+		return name;
 	}
 
-	/**
-	 * @return the city
-	 */
-	public String getCity() {
-		return city;
-	}
 
 	/**
-	 * @param city the city to set
+	 * @param name the name to set
 	 */
-	public void setCity(String city) {
-		this.city = city;
+	public void setName(String name) {
+		this.name = name;
 	}
+
 
 	/**
 	 * @return the price
@@ -75,12 +63,14 @@ public class item {
 		return price;
 	}
 
+
 	/**
 	 * @param price the price to set
 	 */
 	public void setPrice(String price) {
 		this.price = price;
 	}
+
 
 	/**
 	 * @return the description
@@ -89,13 +79,15 @@ public class item {
 		return description;
 	}
 
+
 	/**
 	 * @param description the description to set
 	 */
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
+
+
 	public item()
 	{
 	}
